@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@media only screen and (max-width: 65.625em) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media only screen and (max-width: 50em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (max-width: 35em) {
+  html {
+    font-size: 45%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: "Montserrat";
+  font-size: 1.6rem;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  min-height: 100vh;
+  background-image: url(./img/background-image.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.quote-container {
+  width: auto;
+  max-width: 90rem;
+  /* width: min(100% - 8rem, 90rem);
+  margin-inline: auto; */
+  background-color: rgba(255, 255, 255, 0.184);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+
+  padding: 3rem;
+  border-radius: 1rem;
+}
+
+.quote-text {
+  font-size: 4rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.long-quote {
+  font-size: 2.6rem;
+}
+
+.quote-author {
+  font-style: italic;
+  font-size: 2.8rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#twitter-btn,
+#new-quote-btn {
+  color: #fff;
+  background-color: #0275d8;
+  padding: 1.2rem 2.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2sr;
+}
+
+#twitter-btn:hover,
+#new-quote-btn:hover {
+  transform: translateY(-0.3rem);
+  filter: brightness(120%);
+}
+
+#new-quote-btn {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.loader {
+  border: 1rem solid #f3f3f3;
+  border-top: 1rem solid #333;
+  border-radius: 50%;
+  width: 8rem;
+  height: 8rem;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
